@@ -16,21 +16,13 @@ using System.Windows.Shapes;
 namespace DialogHostTest
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UserControl1 : UserControl
     {
-        private MainWindowViewModel _model;
-        public MainWindow()
+        public UserControl1()
         {
             InitializeComponent();
-            _model = new MainWindowViewModel();
-            DataContext = _model;
-        }
-
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
-        {
-            _model.IsOpen = true;
         }
     }
 }

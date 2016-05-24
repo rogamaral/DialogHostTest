@@ -7,12 +7,23 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <materialDesign:DialogHost IsOpen="True">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <DataTemplate DataType="{x:Type local:ViewModel1}">
+                <local:UserControl1/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <materialDesign:DialogHost IsOpen="{Binding IsOpen}">
         <materialDesign:DialogHost.DialogContent>
             <TextBlock >Dialog content</TextBlock>
         </materialDesign:DialogHost.DialogContent>
-        <Grid>
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Window content</TextBlock>
-        </Grid>
+        <!--<StackPanel VerticalAlignment="Center">
+            <TextBlock HorizontalAlignment="Center">Window content</TextBlock>
+            <Button Click="ButtonBase_OnClick">Show dialog</Button>
+        </StackPanel>-->
+        <ContentControl Content="{Binding ActualViewModel}"/>
     </materialDesign:DialogHost>
 </Window>
