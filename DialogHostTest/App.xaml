@@ -19,7 +19,7 @@
 
             </ResourceDictionary.MergedDictionaries>
 
-
+                <local:MainWindowViewModel x:Key="MainWindowViewModel"/>
 
         </ResourceDictionary>
     </Application.Resources>

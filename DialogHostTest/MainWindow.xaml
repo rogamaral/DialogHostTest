@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:DialogHostTest"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525"
+        d:DataContext="{StaticResource MainWindowViewModel}">
 
     <Window.Resources>
         <ResourceDictionary>
@@ -18,7 +19,7 @@
 
     <materialDesign:DialogHost IsOpen="{Binding IsOpen}">
         <materialDesign:DialogHost.DialogContent>
-            <TextBlock >Dialog content</TextBlock>
+            <TextBlock FontSize="24">Dialog content</TextBlock>
         </materialDesign:DialogHost.DialogContent>
         <!--<StackPanel VerticalAlignment="Center">
             <TextBlock HorizontalAlignment="Center">Window content</TextBlock>
